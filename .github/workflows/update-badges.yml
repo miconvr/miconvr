@@ -15,5 +15,5 @@ jobs:
         uses: jd-35656/readme-credly-badges@v1
         with:
           credly_username: "miconvr"
-          badge_size: "200x200"
+          badge_size: badge_size: "110x110"
           github_token: ${{ secrets.GITHUB_TOKEN }}
