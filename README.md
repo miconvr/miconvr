@@ -1,4 +1,4 @@
-## Verified Credentials
+## Verified Badges
 
 <!-- START CREDLY BADGES -->
 [![Introduction to Cybersecurity](https://images.credly.com/size/110x110/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png)](https://www.credly.com/badges/0f3265c2-d9e5-402b-8290-d3ede181e72d)
