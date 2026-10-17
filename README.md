@@ -1,4 +1,4 @@
 ## 🏅 Certifications & Badges
 
-<!-- START_SECTION:badges -->
-<!-- END_SECTION:badges -->
+<!-- credly-badges-start -->
+<!-- credly-badges-end -->
