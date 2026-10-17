@@ -19,3 +19,4 @@ jobs:
         with:
           CREDLY_USER: "miconvr"
           NUMBER_LAST_BADGES: 10
+          REPOSITORY: "miconvr/miconvr"
