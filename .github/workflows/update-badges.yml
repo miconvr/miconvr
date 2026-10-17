@@ -1,0 +1,21 @@
+name: Update Credly Badges
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-badges:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update Readme with Credly Badges
+        uses: pemtajo/badge-readme@main
+        with:
+          CREDLY_USER: "miconvr"
+          NUMBER_LAST_BADGES: 10
