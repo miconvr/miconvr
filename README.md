@@ -7,15 +7,23 @@
 
 ### Anthropic · Claude Academy
 
-- [AI Fluency: Framework and Foundations](https://academy.claude.com/badges/049fdea0-f6a7-4ebb-b672-a2d8160821e1)
-- [AI Fluency for Students](https://academy.claude.com/verify/b532fe69573f8861de4a2c046be42e04)
-- [Claude 101](https://academy.claude.com/verify/5a4ed4c6fbc7f6feb7a7896512ec5238)
-- [Building with the Claude API](https://linkedin.com/in/miconvr/details/certifications/)[cite: 4]
-- [Introduction to Claude Cowork](https://linkedin.com/in/miconvr/details/certifications/)[cite: 4]
-- [Claude Code 101](https://linkedin.com/in/miconvr/details/certifications/)[cite: 4]
-
-<br />
-
-[![Building with the Claude API](https://img.shields.io/badge/Claude%20Academy-Building%20with%20the%20Claude%20API-D97757?style=for-the-badge&logo=claude&logoColor=white)](https://linkedin.com/in/miconvr/details/certifications/)[cite: 4]
-[![Intro to Claude Cowork](https://img.shields.io/badge/Claude%20Academy-Intro%20to%20Claude%20Cowork-D97757?style=for-the-badge&logo=claude&logoColor=white)](https://linkedin.com/in/miconvr/details/certifications/)[cite: 4]
-[![Claude Code 101](https://img.shields.io/badge/Claude%20Academy-Claude%20Code%20101-D97757?style=for-the-badge&logo=claude&logoColor=white)](https://linkedin.com/in/miconvr/details/certifications/)[cite: 4]
+<p align="left">
+  <a href="https://academy.claude.com/badges/049fdea0-f6a7-4ebb-b672-a2d8160821e1">
+    <img alt="AI Fluency: Framework and Foundations" src="https://img.shields.io/badge/Claude%20Academy-AI%20Fluency%3A%20Framework%20and%20Foundations-D97757?style=for-the-badge&logo=claude&logoColor=white&labelColor=1a1a1a" />
+  </a>
+  <a href="https://academy.claude.com/verify/b532fe69573f8861de4a2c046be42e04">
+    <img alt="AI Fluency for Students" src="https://img.shields.io/badge/Claude%20Academy-AI%20Fluency%20for%20Students-D97757?style=for-the-badge&logo=claude&logoColor=white&labelColor=1a1a1a" />
+  </a>
+  <a href="https://academy.claude.com/verify/5a4ed4c6fbc7f6feb7a7896512ec5238">
+    <img alt="Claude 101" src="https://img.shields.io/badge/Claude%20Academy-Claude%20101-D97757?style=for-the-badge&logo=claude&logoColor=white&labelColor=1a1a1a" />
+  </a>
+  <a href="https://academy.claude.com/verify/9afe0ce52adce6cd778c376bb2a51332">
+    <img alt="Building with the Claude API" src="https://img.shields.io/badge/Claude%20Academy-Building%20with%20the%20Claude%20API-D97757?style=for-the-badge&logo=claude&logoColor=white&labelColor=1a1a1a" />
+  </a>
+  <a href="https://academy.claude.com/verify/d306276bd1f2f0dd8347218ac961b742">
+    <img alt="Introduction to Claude Cowork" src="https://img.shields.io/badge/Claude%20Academy-Intro%20to%20Claude%20Cowork-D97757?style=for-the-badge&logo=claude&logoColor=white&labelColor=1a1a1a" />
+  </a>
+  <a href="https://academy.claude.com/verify/ef09e7042f567fc7fdca73d1bd65a7d1">
+    <img alt="Claude Code 101" src="https://img.shields.io/badge/Claude%20Academy-Claude%20Code%20101-D97757?style=for-the-badge&logo=claude&logoColor=white&labelColor=1a1a1a" />
+  </a>
+</p>
