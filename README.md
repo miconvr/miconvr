@@ -2,6 +2,8 @@
 
 ### Badges
 
+<!--START_SECTION:badges-->
+<!--END_SECTION:badges-->
 <a href="https://www.hackerrank.com/miconvr" title="HackerRank Profile">
   <img src="https://hackerrank-badges.vercel.app/miconvr" alt="HackerRank Badges" width="110" />
 </a>
