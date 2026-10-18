@@ -1,23 +1,13 @@
-# Hi, I'm Mico Gerard Navarro 👋
-
-BSIT student building practical, AI-integrated web systems.
-
-## Featured Project
-
-**[CivicGuard](https://github.com/miconvr/civicguard)**: An AI-integrated web-based incident and curfew reporting system for Barangay Maimpis, City of San Fernando, Pampanga.
-
 ## Certifications & Learning
 
 ### Credly Badges
-
-Synced automatically from [my Credly profile](https://www.credly.com/users/miconvr).
 
 <!--START_SECTION:badges-->
 <!--END_SECTION:badges-->
 
 ### Google Skills
 
-- [Public profile](https://www.skills.google/public_profiles/f53e32b5-711a-4d85-9de4-4b76c1c22cad): Introduction to Generative AI, Introduction to Large Language Models (completion badges)
+- [Public profile](https://www.skills.google/public_profiles/f53e32b5-711a-4d85-9de4-4b76c1c22cad)
 
 ### Anthropic · Claude Academy
 
