@@ -1,3 +1,4 @@
+
 name: Update Certifications Grid
 
 on:
@@ -16,84 +17,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Fetch Credly Badges
-        env:
-          CREDLY_USERNAME: miconvr
-        run: |
-          python - <<'PY'
-          import json
-          import os
-          import re
-          import urllib.request
-          import html
-
-          username = os.environ["CREDLY_USERNAME"]
-          url = f"https://www.credly.com/users/{username}/badges.json"
-
-          req = urllib.request.Request(
-              url,
-              headers={"User-Agent": "Mozilla/5.0"}
-          )
-
-          try:
-              with urllib.request.urlopen(req, timeout=30) as response:
-                  data = json.loads(response.read().decode("utf-8"))
-          except Exception as e:
-              raise SystemExit(f"Failed to fetch Credly badges: {e}")
-
-          badges = data.get("data", [])
-          items = []
-
-          for badge in badges:
-              template = badge.get("badge_template") or {}
-              badge_url = badge.get("user_badge_url")
-              image_url = template.get("image_url")
-              name = template.get("name", "Credly Badge")
-
-              if badge_url and image_url:
-                  items.append(
-                      f'<a href="{html.escape(badge_url, quote=True)}">'
-                      f'<img src="{html.escape(image_url, quote=True)}" '
-                      f'width="110" alt="{html.escape(name, quote=True)}" '
-                      f'title="{html.escape(name, quote=True)}"></a>'
-                  )
-
-          if not items:
-              raise SystemExit(
-                  "No badges returned. README was not changed."
-              )
-
-          start = "<!-- START CREDLY BADGES -->"
-          end = "<!-- END CREDLY BADGES -->"
-
-          with open("README.md", encoding="utf-8") as f:
-              readme = f.read()
-
-          pattern = re.escape(start) + r".*?" + re.escape(end)
-          replacement = start + "\n" + "\n".join(items) + "\n" + end
-
-          updated, count = re.subn(
-              pattern, lambda _: replacement, readme, count=1,
-              flags=re.DOTALL
-          )
-
-          if count != 1:
-              raise SystemExit("Credly markers missing or duplicated.")
-
-          with open("README.md", "w", encoding="utf-8") as f:
-              f.write(updated)
-
-          print(f"Updated README with {len(items)} Credly badges.")
-          PY
-
-      - name: Commit and Push Updates
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: update Credly certifications"
-            git push
-          else
-            echo "Everything is already up to date."
-          fi
+      - name: Update Credly Badges
+        uses: kpab/credly-readme@v1
+        with:
+          credly_user: miconvr
+          sort: LATEST
+          badge_width: 110
