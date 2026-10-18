@@ -1,8 +1,10 @@
+
 name: Update Certifications Grid
+
 on:
   schedule:
-    - cron: "0 2 * * *" # Runs automatically every day at 2:00 AM UTC
-  workflow_dispatch: # Allows you to manually trigger it
+    - cron: "0 2 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -10,70 +12,88 @@ permissions:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Fetch Credly and Merge Claude Badges
-        shell: python
+      - name: Fetch Credly Badges
+        env:
+          CREDLY_USERNAME: miconvr
         run: |
-          import urllib.request
+          python - <<'PY'
           import json
+          import os
           import re
+          import urllib.request
+          import html
 
-          # 1. Configuration
-          credly_username = "miconvr"
-          badge_size = "110"
-          claude_verify_url = "https://claude.com"
-          
-          # Clean, URL-encoded image query to guarantee it passes through GitHub's proxy smoothly
-          claude_badge_img = "https://shields.io"
+          username = os.environ["CREDLY_USERNAME"]
+          url = f"https://www.credly.com/users/{username}/badges.json"
 
-          # 2. Define the static Claude Badge HTML element
-          claude_html = f'<a href="{claude_verify_url}" target="_blank"><img src="{claude_badge_img}" height="40" alt="Claude Academy - AI Fluency" /></a>'
+          req = urllib.request.Request(
+              url,
+              headers={"User-Agent": "Mozilla/5.0"}
+          )
 
-          # 3. Fetch public badges from Credly API
-          credly_html_list = []
           try:
-              url = f"https://credly.com{credly_username}/badges"
-              req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-              with urllib.request.urlopen(req) as response:
-                  data = json.loads(response.read().decode())
-                  
-                  # Extract and loop through your active credentials
-                  for badge in data.get('data', []):
-                      b_url = badge.get('user_badge_url')
-                      b_img = badge.get('badge_template', {}).get('image_url')
-                      b_title = badge.get('badge_template', {}).get('name')
-                      
-                      if b_url and b_img:
-                          html_item = f'<a href="{b_url}" target="_blank"><img src="{b_img}" width="{badge_size}" height="{badge_size}" alt="{b_title}" title="{b_title}" /></a>'
-                          credly_html_list.append(html_item)
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  data = json.loads(response.read().decode("utf-8"))
           except Exception as e:
-              print(f"Warning: Could not fetch Credly data: {e}")
+              raise SystemExit(f"Failed to fetch Credly badges: {e}")
 
-          # 4. Construct the unified outputs
-          claude_output = f"<!-- START CLAUDE BADGES -->\\n{claude_html}\\n<!-- END CLAUDE BADGES -->"
-          credly_output = f"<!-- START CREDLY BADGES -->\\n{' '.join(credly_html_list)}\\n<!-- END CREDLY BADGES -->"
+          badges = data.get("data", [])
+          items = []
 
-          # 5. Read and update the README file
-          with open("README.md", "r", encoding="utf-8") as file:
-              readme = file.read()
+          for badge in badges:
+              template = badge.get("badge_template") or {}
+              badge_url = badge.get("user_badge_url")
+              image_url = template.get("image_url")
+              name = template.get("name", "Credly Badge")
 
-          # Replace sections cleanly using regex
-          readme = re.sub(r"<!-- START CLAUDE BADGES -->.*?<!-- END CLAUDE BADGES -->", claude_output, readme, flags=re.DOTALL)
-          readme = re.sub(r"<!-- START CREDLY BADGES -->.*?<!-- END CREDLY BADGES -->", credly_output, readme, flags=re.DOTALL)
+              if badge_url and image_url:
+                  items.append(
+                      f'<a href="{html.escape(badge_url, quote=True)}">'
+                      f'<img src="{html.escape(image_url, quote=True)}" '
+                      f'width="110" alt="{html.escape(name, quote=True)}" '
+                      f'title="{html.escape(name, quote=True)}"></a>'
+                  )
 
-          with open("README.md", "w", encoding="utf-8") as file:
-              file.write(readme)
+          if not items:
+              raise SystemExit(
+                  "No badges returned. README was not changed."
+              )
+
+          start = "<!-- START CREDLY BADGES -->"
+          end = "<!-- END CREDLY BADGES -->"
+
+          with open("README.md", encoding="utf-8") as f:
+              readme = f.read()
+
+          pattern = re.escape(start) + r".*?" + re.escape(end)
+          replacement = start + "\n" + "\n".join(items) + "\n" + end
+
+          updated, count = re.subn(
+              pattern, lambda _: replacement, readme, count=1,
+              flags=re.DOTALL
+          )
+
+          if count != 1:
+              raise SystemExit("Credly markers missing or duplicated.")
+
+          with open("README.md", "w", encoding="utf-8") as f:
+              f.write(updated)
+
+          print(f"Updated README with {len(items)} Credly badges.")
+          PY
 
       - name: Commit and Push Updates
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@://github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
           if ! git diff --cached --quiet; then
-            git commit -m "chore: automated sync of portfolio credentials"
+            git commit -m "chore: update Credly certifications"
             git push
           else
             echo "Everything is already up to date."
