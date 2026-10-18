@@ -3,7 +3,10 @@
 ### Badges
 
 <!--START_SECTION:badges-->
-<!--END_SECTION:badges--> <a href="https://www.hackerrank.com/miconvr" title="HackerRank SQL 5-Star Gold Badge"><img src="https://hacker-rank-badge.herokuapp.com/api/miconvr" width="110" alt="HackerRank Badges" /></a>
+<!--END_SECTION:badges-->
+<a href="https://www.hackerrank.com/miconvr" title="HackerRank SQL 5-Star Gold Badge">
+  <img alt="HackerRank SQL 5-Star Gold Badge" src="https://img.shields.io/badge/HackerRank-5★%20Gold%20(SQL)-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white&labelColor=1a1a1a" />
+</a>
 
 ### Claude Academy Badges
 
