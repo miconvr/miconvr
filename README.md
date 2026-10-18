@@ -3,8 +3,7 @@
 ### Badges
 
 <!--START_SECTION:badges-->
-<!--END_SECTION:badges--> <a href="https://www.hackerrank.com/miconvr" title="HackerRank SQL 5-Star Gold Badge"><img src="https://img.shields.io/badge/HackerRank-5★%20Gold%20(SQL)-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white&labelColor=1a1a1a" width="110" alt="HackerRank SQL 5-Star Gold Badge" /></a>
-
+<!--END_SECTION:badges--> <a href="https://www.hackerrank.com/miconvr" title="HackerRank 5-Star SQL Badge"><img src="https://img.shields.io/badge/HackerRank-★★★★★%20SQL-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white&labelColor=1a1a1a" width="110" alt="HackerRank 5-Star SQL Badge" /></a>
 ### Claude Academy Badges
 
 <a href="https://academy.claude.com/verify/3bbdd8ddbd6c9769a2d174c070bad1d9">
