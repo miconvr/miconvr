@@ -5,10 +5,6 @@
 <!--START_SECTION:badges-->
 <!--END_SECTION:badges-->
 
-### Google Skills
-
-- [Public profile](https://www.skills.google/public_profiles/f53e32b5-711a-4d85-9de4-4b76c1c22cad)
-
 ### Anthropic · Claude Academy
 
 - [AI Fluency: Framework and Foundations](https://academy.claude.com/badges/049fdea0-f6a7-4ebb-b672-a2d8160821e1)
