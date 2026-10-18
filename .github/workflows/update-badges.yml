@@ -25,10 +25,11 @@ jobs:
           credly_username = "miconvr"
           badge_size = "110"
           claude_verify_url = "https://claude.com"
+          
+          # Clean, URL-encoded image query to guarantee it passes through GitHub's proxy smoothly
           claude_badge_img = "https://shields.io"
 
           # 2. Define the static Claude Badge HTML element
-          # Sized at 165x40 to look sharp as a leading badge row anchor
           claude_html = f'<a href="{claude_verify_url}" target="_blank"><img src="{claude_badge_img}" height="40" alt="Claude Academy - AI Fluency" /></a>'
 
           # 3. Fetch public badges from Credly API
@@ -52,8 +53,8 @@ jobs:
               print(f"Warning: Could not fetch Credly data: {e}")
 
           # 4. Construct the unified outputs
-          claude_output = f"<!-- START CLAUDE BADGES -->\n{claude_html}\n<!-- END CLAUDE BADGES -->"
-          credly_output = f"<!-- START CREDLY BADGES -->\n{' '.join(credly_html_list)}\n<!-- END CREDLY BADGES -->"
+          claude_output = f"<!-- START CLAUDE BADGES -->\\n{claude_html}\\n<!-- END CLAUDE BADGES -->"
+          credly_output = f"<!-- START CREDLY BADGES -->\\n{' '.join(credly_html_list)}\\n<!-- END CREDLY BADGES -->"
 
           # 5. Read and update the README file
           with open("README.md", "r", encoding="utf-8") as file:
@@ -69,7 +70,7 @@ jobs:
       - name: Commit and Push Updates
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.email "github-actions[bot]@://github.com"
           git add README.md
           if ! git diff --cached --quiet; then
             git commit -m "chore: automated sync of portfolio credentials"
