@@ -4,8 +4,8 @@
 
 <!--START_SECTION:badges-->
 <!--END_SECTION:badges-->
-<a href="https://www.hackerrank.com/miconvr" title="HackerRank Profile">
-  <img src="https://hackerrank-badges.github.io/api/miconvr/sql" alt="HackerRank SQL Badge" width="110" />
+<a href="https://www.hackerrank.com/miconvr" title="HackerRank SQL 5-Star Gold Badge">
+  <img src="./hackerrank-sql-gold.png" width="110" alt="HackerRank SQL 5-Star Gold Badge" />
 </a>
 
 ### Claude Academy Badges
