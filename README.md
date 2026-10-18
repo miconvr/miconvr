@@ -12,7 +12,7 @@
 <sub>Claude Academy · Certificate of Completion</sub>
 
 <a href="https://academy.claude.com/verify/b532fe69573f8861de4a2c046be42e04">
-  <strong>View Claude Academy Certificate</strong>
+  <strong>AI Fluency for students</strong>
 </a>
 
-<sub>Claude Academy · Verified Certificate</sub>
+<sub>Claude Academy · Verified Completion Badge</sub>
