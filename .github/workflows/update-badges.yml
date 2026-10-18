@@ -1,25 +1,31 @@
-
 name: Update Certifications Grid
 
 on:
   schedule:
-    - cron: "0 2 * * *"
-  workflow_dispatch:
+    - cron: "0 2 * * *" # daily at 02:00 UTC (10:00 AM Philippine time)
+  workflow_dispatch: # lets you run it manually from the Actions tab
 
 permissions:
   contents: write
 
+# Prevents two runs from overlapping and conflicting on the commit
+concurrency:
+  group: update-credly-badges
+  cancel-in-progress: true
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update Credly Badges
+      - name: Update Credly badges
         uses: kpab/credly-readme@v1
         with:
           credly_user: miconvr
           sort: LATEST
-          badge_width: 110
+          badge_width: "110"
+          commit_message: "chore: update credly badges"
