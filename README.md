@@ -5,6 +5,8 @@
 
 ### Anthropic & Claude Certificates
 
+### Anthropic & Claude Certificates
+
 <a href="https://academy.claude.com/badges/049fdea0-f6a7-4ebb-b672-a2d8160821e1">
   <strong>AI Fluency: Framework and foundations</strong>
 </a>
@@ -13,6 +15,12 @@
 
 <a href="https://academy.claude.com/verify/b532fe69573f8861de4a2c046be42e04">
   <strong>AI Fluency for students</strong>
+</a>
+
+<sub>Claude Academy · Verified Completion Badge</sub>
+
+<a href="https://academy.claude.com/verify/5a4ed4c6fbc7f6feb7a7896512ec5238">
+  <strong>Claude 101</strong>
 </a>
 
 <sub>Claude Academy · Verified Completion Badge</sub>
