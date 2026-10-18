@@ -1,4 +1,4 @@
 ### Certifications & Badges
 
-<!-- START CREDLY BADGES -->
-<!-- END CREDLY BADGES -->
+<!--START_SECTION:badges-->
+<!--END_SECTION:badges-->
