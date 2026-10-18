@@ -7,8 +7,6 @@
 <a href="https://www.hackerrank.com/miconvr" title="HackerRank SQL 5-Star Gold Badge">
   <img src="assets/hackerrank-sql-gold.png" width="110" alt="HackerRank SQL 5-Star Gold Badge" />
 </a>
-</a>
-</a>
 
 ### Claude Academy Badges
 
