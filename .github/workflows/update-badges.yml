@@ -20,8 +20,8 @@ jobs:
         run: |
           import re
 
-          # Paste your unique verification link between the quotes from your Academy dashboard!
-          claude_verify_url = "YOUR_CLAUDE_ACADEMY_COPY_LINK_HERE"
+          # Your verified Claude Academy verification URL
+          claude_verify_url = "https://academy.claude.com/badges/049fdea0-f6a7-4ebb-b672-a2d8160821e1"
           
           # Production asset URL for the AI Fluency badge icon
           claude_badge_img = "https://claude.com"
