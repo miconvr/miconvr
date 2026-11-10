@@ -1,8 +1,14 @@
-<p align="center">
-  <a href="https://miconvr.vercel.app">
-    <img src="https://img.shields.io/badge/Portfolio-miconvr.vercel.app-6D28D9?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0D1117" alt="Portfolio" />
-  </a>
-  <a href="https://www.linkedin.com/in/miconvr">
-    <img src="https://img.shields.io/badge/LinkedIn-miconvr-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117" alt="LinkedIn" />
-  </a>
-</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="56" viewBox="0 0 260 56">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6D28D9">
+        <animate attributeName="stop-color" values="#6D28D9;#0A66C2;#6D28D9" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#0A66C2">
+        <animate attributeName="stop-color" values="#0A66C2;#6D28D9;#0A66C2" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+  <rect width="260" height="56" rx="28" fill="url(#g)"/>
+  <text x="130" y="35" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#fff">View My Portfolio →</text>
+</svg>
