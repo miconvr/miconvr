@@ -1,1 +1,1 @@
-[![Portfolio](https://img.shields.io/website?url=https%3A%2F%2Fmiconvr.vercel.app&up_message=online&up_color=4B5563&down_message=offline&label=Portfolio&style=for-the-badge&labelColor=1F2937)](https://miconvr.vercel.app)
+[![Portfolio](https://img.shields.io/badge/Portfolio-miconvr.vercel.app-4B5563?style=for-the-badge&logo=vercel&logoColor=white&labelColor=1F2937)](https://miconvr.vercel.app)
